@@ -6,11 +6,11 @@ var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
     burger.getBurgers(function (data) {
-        var handlebarsObject = {
+        var hbsObject = {
             burgers: data
         };
 
-        res.render("index", handlebarsObject);
+        res.render("index", hbsObject);
     });
 });
 
