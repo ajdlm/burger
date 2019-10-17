@@ -1,44 +1,41 @@
 <div class="container">
-    <div class="row text-center mt-3">
+    <div class="row mt-3">
         <div class="col-4">
-            <h2 class="mt-5 pt-5">Burgers Queued</h2>
+            <h2 class="ml-4 pl-2 mt-5 pt-5 pl-1">Burgers Served</h2>
 
-            <ul>
+            <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
+                {{> burgers/burger-block devoured=false}}
                 {{/unless}}
                 {{/each}}
-            </ul>
+            </ol>
         </div>
 
         <div class="col-4 text-center">
-            <img class="mb-1" src="assets/img/burger.png" style="max-width: 200px;" alt="burger picture" />
+            <img id="burgerPicture" class="mb-1" src="assets/img/burger.png" alt="burger picture" />
 
-            <h1 class="mt-2 mb-3">Eat-da-Burger!</h1>
+            <h1 class="mt-2">Eat-da-Burger!</h1>
 
-            <form class="create-form">
+            <form class="burgerForm">
+                <textarea class="py-4 mt-2 mb-3" rows="1" id="burgerInput"></textarea>
 
-                <div class="form-group">
-                    <textarea class="py-4" rows="1" name="name" style="width: 100%;"></textarea>
-                </div>
-
-                <button class="mb-3 bg-primary border-primary text-white p-2 rounded" type="submit">Submit</button>
+                <button class="mb-3 burgerSubmit bg-primary border-primary text-white p-2 rounded" type="submit">Submit</button>
 
                 <p><strong>Enter a burger you want to eat, then click the Submit button.</strong></p>
             </form>
         </div>
 
         <div class="col-4">
-            <h2 class="mt-5 pt-5">Burgers Devoured</h2>
+            <h2 class="ml-4 pl-2 mt-5 pt-5">Burgers Devoured</h2>
 
-            <ul>
+            <ol>
                 {{#each burgers}}
                 {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
+                {{> burgers/burger-block devoured=true}}
                 {{/if}}
                 {{/each}}
-            </ul>
+            </ol>
         </div>
     </div>
 </div>

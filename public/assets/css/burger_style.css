@@ -1,3 +1,19 @@
 body {
     background: #cc7722;
 }
+
+#burgerPicture {
+    max-width: 200px;
+}
+
+#burgerInput {
+    width: 100%;
+}
+
+ol {
+    list-style: none;
+}
+
+ol>li:before {
+    content: attr(data-id) ". ";
+}

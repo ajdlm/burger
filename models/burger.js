@@ -7,8 +7,8 @@ var burger = {
         });
     },
 
-    addBurger: function(values, callback) {
-        orm.addRow("burgers", values, function(result) {
+    addBurger: function(columnNames, values, callback) {
+        orm.addRow("burgers", columnNames, values, function(result) {
             callback(result);
         });
     },

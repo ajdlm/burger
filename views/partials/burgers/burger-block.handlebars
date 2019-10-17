@@ -1,7 +1,9 @@
-<li>
+<li class="my-3" data-id="{{id}}">
     {{burger_name}}
 
-    <button class="eatBurger" data-id="{{id}}">
-        {{#unless devoured}}{{/unless}}
+    {{#unless devoured}}
+    <button class="eatBurger bg-primary border-primary text-white rounded ml-1 p-1">
+        Eat!
     </button>
+    {{/unless}}
 </li>
