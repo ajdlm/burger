@@ -1,5 +1,7 @@
 var mysql = require("mysql");
-var password = require("./password.js");
+// Commenting out the following line so that the app will work on Heroku
+// This is necessary because password.js is included in our .gitignore
+// var password = require("./password.js");
 var connection;
 
 if (process.env.JAWSDB_URL) {
